@@ -1,0 +1,424 @@
+  /*General Styles */
+
+body {
+  color: hsla(18, 5.7%, 34.3%, 1);
+  font-family: Palanquin, Arial, sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 2rem 0;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+h2.center {
+  margin: 1.5rem auto;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.15rem;
+  font-weight: bold;
+}
+
+/* General Lay-out Containers and other General Page Layout Styles */
+
+.container-main-sub {
+  display: inline-flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+}
+
+.sub {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+}
+
+.main img {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.press:active {
+  transform: scale(0.95, 1);
+}
+
+p.main-info {
+  margin: 1.5rem 0;
+}
+
+.notice p {
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+
+
+/*Header */
+
+header {
+  width: 100%;
+  height: 4rem;
+  background-color: white;
+}
+
+nav ul {
+  height: 4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+li.mob-only:active {
+  border-bottom: 1px solid;
+  border-color: hsla(168, 19%, 27%, 1);
+}
+
+
+/* Media Queries for Nav Bar - Mobile-specific, such that the logo will not change in the Desktop version */
+
+@media only screen and (max-width: 920px) {
+  li#logo:active {
+    border-bottom: 1px solid;
+    border-color: hsla(168, 19%, 27%, 1);
+  }
+}
+
+
+/* Media Queries for Nav Bar - Directs Changes for Desktop Size */
+
+@media only screen and (min-width: 920px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    margin: auto;
+  }
+  li {
+    display: inline;
+  }
+  nav li {
+    padding-right: 1.5rem;
+  }
+  li#logo {
+    margin-left: 1.5rem;
+  }
+  ul.logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  ul.menu {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  ul.logo>li:first-child {
+    padding-right: 0;
+  }
+  span.word-one, span.word-two {
+    text-transform: uppercase;
+  }
+  span.word-one {
+    font-weight: bold;
+  }
+  span.word-two {
+    opacity: 0.45;
+  }
+  span.word-one:hover {
+    color: hsla(168, 19%, 27%, 1);
+  }
+  span.word-two:hover {
+    color: hsla(200, 83.8%, 21.8%, 1);
+    text-shadow: 2px 2px 4px #000000;
+  }
+}
+
+
+/*Jumatron*/
+
+div.gray {
+  background-color: hsla(15, 3.8%, 79.2%, 0.5);
+}
+
+.jumbatron img {
+  max-width: 100%;
+}
+
+.jumbatron p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 1.5rem 0;
+}
+
+.btn {
+  background-color: hsla(168, 13.4%, 44%, 0.98);
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  width: 70%;
+  height: 2rem;
+  transition: background-color 200ms ease-in-out 10ms, opacity 300ms ease-in-out 10ms, scale 200ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.btn p {
+  padding: 0.5rem 2rem;
+}
+
+.btn:hover {
+  background-color: hsla(168, 19%, 27%, 1);
+}
+
+
+/* Media Queries for Jumatron - Directs Changes for Desktop Size */
+
+@media only screen and (min-width: 920px) {
+  div.jumbatron {
+    display: flex;
+  }
+  div.jumbatron-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .jumbatron h1 {
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+  }
+}
+
+
+/* Learning Section */
+
+div.read-more {
+  line-height: 1.2rem;
+}
+
+p.read-more {
+  margin: 0.5rem 0;
+  width: 100%;
+}
+
+.read-more-span {
+  color: hsla(200, 83.8%, 21.8%, 1);
+  font-weight: 500;
+  transform: text-decoration 1000ms;
+  transform-origin: left;
+  border-bottom: none;
+}
+
+.read-more-span:hover {
+  text-decoration: underline;
+}
+
+.read-more-span:visited {
+  opacity: 0.5;
+}
+
+
+/* Thesis section */
+
+.thesis video {
+  max-width: 100%;
+}
+
+div.learning {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.learning>.column-mob {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.learning .btn {
+  margin: 0.5rem 0;
+  background-color: hsla(199, 83.8%, 21.8%, 0.6);
+}
+
+.learning .btn:hover {
+  margin: 0.5rem 0;
+  background-color: hsla(200, 83.8%, 21.8%, 1);
+}
+
+
+/*Learning media querues - changes for desktop*/
+
+@media only screen and (min-width: 920px) {
+  .learning>div.dktop-only {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .subject-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 4.5rem;
+  }
+  .subject-box {
+    width: 30%;
+    height: auto;
+  }
+  .subject-box:nth-child(3n + 2) {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  p.course {
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+    text-decoration: underline;
+  }
+  span.course-option:hover {
+    text-decoration: underline;
+    text-decoration-color: hsla(168, 19%, 27%, 1);
+    color: hsla(168, 19%, 27%, 1);
+  }
+  h4 {
+    font-weight: bold;
+    margin: 1rem 0;
+  }
+  div.subject-box {
+    background-color: hsla(199, 83.8%, 21.8%, 0.2);
+    margin-bottom: 2rem;
+  }
+  div.course-description {
+    margin: 0 1rem 1.5rem 1rem;
+    line-height: 1.15rem;
+  }
+}
+
+
+/* Desktop Thesis */
+
+@media only screen and (min-width: 920px) {
+  div.thesis {
+    margin-top: 1rem;
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+}
+
+
+/*Footer */
+
+footer p, span.dktop-only {
+  font-size: 0.8rem;
+  padding: 1rem;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+/* Footer media queries for desktop */
+
+@media only screen and (min-width: 920px) {
+  footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer p {
+    margin-left: 1.5rem;
+  }
+}
+
+/*General Media Queries - Breakpoint of 920px chosen based on when the design started to break-up*/
+/* Document-wide structural changes for responsive design - Desktop */
+
+@media only screen and (min-width: 920px) {
+  .container-main-sub {
+    margin-left: 2rem;
+    margin: 1rem 2rem;
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+  .container-main-sub img {
+    padding: 0;
+  }
+  .sub .notice {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+  }
+  .mob-only {
+    display: none;
+  }
+  .column-mob {
+    display: none;
+  }
+  .main {
+    width: 58%;
+    display: inline-flex;
+    flex-direction: column;
+  }
+  .sub {
+    width: 38%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 1rem;
+  }
+  .sub .notice:first-of-type {
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .sub img {
+    width: 35%;
+  }
+  .read-more {
+    margin-left: 1rem;
+    width: 60%;
+  }
+  .notice:hover {
+    background-color: hsla(199, 83.8%, 21.8%, 0.2);
+  }
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+/* Document-wide structural changes for responsive design - Mobile */
+
+  @media only screen and (max-width: 920px) {
+    .dktop-only {
+      display: none;
+    }
+    .sub {
+      margin-top: 1rem;
+    }
+    .container-main-sub {
+      margin-left: 0;
+      padding-left: 0;
+    }
+    .read-more {
+      margin: 1rem 0 4rem 1rem;
+    }
+    .read-more p {
+      margin-bottom: 0.50rem;
+    }
+  }
